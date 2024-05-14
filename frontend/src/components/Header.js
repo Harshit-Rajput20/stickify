@@ -3,6 +3,7 @@ import Logo from './Logo'
 import { GoSearch } from "react-icons/go";
 import { FaRegCircleUser } from "react-icons/fa6";
 import { FaCartShopping } from "react-icons/fa6";
+import {Link} from 'react-router-dom'
 
 
 
@@ -11,7 +12,9 @@ function Header() {
     <header className='h-16 shadow-md bg-white'>
        <div className='h-full container mx-auto flex items-center px-4  justify-between '>
         <div className=''>
+          <Link to = {"/"}>
           <Logo w={90} h={60}/>
+          </Link>
         </div>
         <div className=' hidden lg:flex items-center w-full justify-between max-w-sm border rounded-full focus-within:shadow-md'>
           <input type='text' placeholder='search items here' className='w-full outline-none pl-2'/>
@@ -33,7 +36,7 @@ function Header() {
         </div>
           
           <div>
-            <button className='px-3 py-1 rounded-full text-white bg-red-600 hover:bg-red-700'>Login</button>
+            <Link to = {"/login"}className='px-3 py-1 rounded-full text-white bg-red-600 hover:bg-red-700'>Login</Link>
           </div>
 
         </div>
